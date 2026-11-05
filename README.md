@@ -6,14 +6,15 @@ A state policy intelligence system for tracking Workforce Pell implementation ac
 
 **Workforce Pell** expands Federal Pell Grant eligibility to certain high-quality, short-term workforce programs. Eligible programs are generally designed to be completed in roughly **8 to under 15 weeks** and must meet additional requirements related to workforce alignment, program quality, completion, job placement, credential value, and state/federal approval. The policy matters because it creates a new federal financing pathway for short-term training while also requiring states, institutions, workforce agencies, and employers to build much stronger approval, data, and accountability systems.
 
+
 **Official reference:** [U.S. Department of Education — Workforce Pell Grant Final Rule Fact Sheet](https://www.ed.gov/media/document/workforce-pell-grant-final-rule-fact-sheet-114075.pdf)
+
 
 As of **October 21, 2026**, the tracker records **28 federally approved programs on the public record across 12 institutions in 6 states**. Of those, **21 were announced directly by the U.S. Department of Education** and **7 are documented as federally approved by official state sources**. Three newly state-listed Eastern Iowa Community Colleges records are retained with an additional verification flag because a separate ED announcement has not yet been identified.
 
-**[View the live Tableau Public dashboard](https://public.tableau.com/app/profile/anruo.wang5635/viz/WorkforcePellGrantStatewideImplementationTracker/Tracker?publish=yes)**
 
-![Workforce Pell State Implementation Tracker](screenshots/tableau-overview-2026-10-21.jpg)
-
+<img width="1430" height="856" alt="Screenshot 2026-11-04 at 11 13 33 PM" src="https://github.com/user-attachments/assets/2d02c7b4-3d5f-44dc-a407-be0bb52471f4" />
+[View the live Tableau Public dashboard here](https://public.tableau.com/app/profile/anruo.wang5635/viz/WorkforcePellGrantStatewideImplementationTracker/Tracker?publish=yes)
 <sub>Dashboard snapshot shown above reflects data through October 21, 2026.</sub>
 
 ## What the tracker answers
