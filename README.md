@@ -28,7 +28,7 @@ As of **October 21, 2026**, the tracker records **28 federally approved programs
 ## Current architecture
 
 **Visualization:** [Tableau Public](https://public.tableau.com/app/profile/anruo.wang5635/viz/WorkforcePellGrantStatewideImplementationTracker/Tracker?publish=yes)  
-**Operational backend:** Google Sheets  
+**Operational backend:** [Google Sheets](https://docs.google.com/spreadsheets/d/1rhVtZF4VRqX-_yOFa4gCSe73H8bMqkhNPm9U_hHtNrM/edit?usp=sharing)  
 **Monitoring:** Python + OpenAI-assisted source discovery/extraction  
 **Quality control:** Human review before authoritative state-status changes
 
