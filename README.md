@@ -36,6 +36,26 @@ As of **October 21, 2026**, the tracker records **28 federally approved programs
 
 This project combines policy research, a structured Google Sheets backend, Tableau visualization, and an AI-assisted human-in-the-loop monitoring workflow. The goal is not only to show **where each state stands**, but also **what changed, what evidence supports the status, which programs are approved, and how implementation capacity differs across states**.
 
+### Monitoring architecture
+
+The monitoring pipeline is designed as a human-in-the-loop system: automation accelerates source discovery, extraction, validation, and deduplication, while authoritative state-status changes remain subject to analyst review.
+
+```mermaid
+flowchart LR
+    A[Official sources / Web search / Manual URL]
+    B[Source retrieval]
+    C[HTML / PDF extraction]
+    D[Materiality classification]
+    E[Structured event extraction]
+    F[Validation + duplicate checking]
+    G[Review Queue]
+    H[Human review]
+    I[State_Status / Event_History / Approved_Programs]
+    J[Tableau dashboard]
+
+    A --> B --> C --> D --> E --> F --> G --> H --> I --> J
+```
+
 ## Core tables
 
 - `State_Status` — one row per state; authoritative current snapshot
