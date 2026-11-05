@@ -14,8 +14,9 @@ As of **October 21, 2026**, the tracker records **28 federally approved programs
 
 
 <img width="1430" height="856" alt="Screenshot 2026-11-04 at 11 13 33 PM" src="https://github.com/user-attachments/assets/2d02c7b4-3d5f-44dc-a407-be0bb52471f4" />
-[View the live Tableau Public dashboard here](https://public.tableau.com/app/profile/anruo.wang5635/viz/WorkforcePellGrantStatewideImplementationTracker/Tracker?publish=yes)
 <sub>Dashboard snapshot shown above reflects data through October 21, 2026.</sub>
+
+[View the live Tableau Public dashboard here](https://public.tableau.com/app/profile/anruo.wang5635/viz/WorkforcePellGrantStatewideImplementationTracker/Tracker?publish=yes)
 
 ## What the tracker answers
 
