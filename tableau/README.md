@@ -1,9 +1,8 @@
-# Tableau Workbook
+# Tableau Dashboard
 
-Place the current `.twb` workbook here once the local copy is synchronized.
+The public-facing visualization for this project is maintained on Tableau Public rather than versioning the local workbook file in this repository.
 
-Recommended filename:
+**Live dashboard:**  
+https://public.tableau.com/app/profile/anruo.wang5635/viz/WorkforcePellGrantStatewideImplementationTracker/Tracker?publish=yes
 
-`Workforce_Pell_Grant_Statewide_Implementation_Tracker.twb`
-
-Use `.twb` for version control because it is XML and produces readable diffs. Avoid committing `.hyper` extracts.
+This avoids committing local Tableau extract files or machine-specific data-source paths while keeping the portfolio-facing visualization accessible.
