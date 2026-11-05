@@ -2,7 +2,19 @@
 
 A state policy intelligence system for tracking Workforce Pell implementation across the United States.
 
-This project combines policy research, a structured Google Sheets backend, Tableau visualization, and an AI-assisted human-in-the-loop monitoring workflow. The goal is not only to show **where each state stands**, but also **what changed, what evidence supports the status, which programs are approved, and how implementation capacity differs across states**.
+## What is Workforce Pell?
+
+**Workforce Pell** expands Federal Pell Grant eligibility to certain high-quality, short-term workforce programs. Eligible programs are generally designed to be completed in roughly **8 to under 15 weeks** and must meet additional requirements related to workforce alignment, program quality, completion, job placement, credential value, and state/federal approval. The policy matters because it creates a new federal financing pathway for short-term training while also requiring states, institutions, workforce agencies, and employers to build much stronger approval, data, and accountability systems.
+
+**Official reference:** [U.S. Department of Education — Workforce Pell Grant Final Rule Fact Sheet](https://www.ed.gov/media/document/workforce-pell-grant-final-rule-fact-sheet-114075.pdf)
+
+As of **October 21, 2026**, the tracker records **28 federally approved programs on the public record across 12 institutions in 6 states**. Of those, **21 were announced directly by the U.S. Department of Education** and **7 are documented as federally approved by official state sources**. Three newly state-listed Eastern Iowa Community Colleges records are retained with an additional verification flag because a separate ED announcement has not yet been identified.
+
+**[View the live Tableau Public dashboard](https://public.tableau.com/app/profile/anruo.wang5635/viz/WorkforcePellGrantStatewideImplementationTracker/Tracker?publish=yes)**
+
+![Workforce Pell State Implementation Tracker](screenshots/tableau-overview-2026-10-21.jpg)
+
+<sub>Dashboard snapshot shown above reflects data through October 21, 2026.</sub>
 
 ## What the tracker answers
 
@@ -15,10 +27,12 @@ This project combines policy research, a structured Google Sheets backend, Table
 
 ## Current architecture
 
-**Visualization:** Tableau Public / Tableau Desktop  
+**Visualization:** [Tableau Public](https://public.tableau.com/app/profile/anruo.wang5635/viz/WorkforcePellGrantStatewideImplementationTracker/Tracker?publish=yes)  
 **Operational backend:** Google Sheets  
 **Monitoring:** Python + OpenAI-assisted source discovery/extraction  
 **Quality control:** Human review before authoritative state-status changes
+
+This project combines policy research, a structured Google Sheets backend, Tableau visualization, and an AI-assisted human-in-the-loop monitoring workflow. The goal is not only to show **where each state stands**, but also **what changed, what evidence supports the status, which programs are approved, and how implementation capacity differs across states**.
 
 ## Core tables
 
@@ -74,7 +88,8 @@ workforce-pell-state-tracker/
 ├── src/
 │   └── README.md
 ├── screenshots/
-│   └── README.md
+│   ├── README.md
+│   └── tableau-overview-2026-10-21.jpg
 └── .gitignore
 ```
 
