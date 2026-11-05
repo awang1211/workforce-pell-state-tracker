@@ -75,24 +75,51 @@ Important: Stage 4 intentionally includes both state-approved and federally appr
 ```text
 workforce-pell-state-tracker/
 ├── README.md
+├── requirements.txt
+├── .env.example
+├── .gitignore
+├── config/
+│   └── states.json
 ├── docs/
 │   ├── methodology.md
 │   ├── stage-taxonomy.md
 │   ├── data-model.md
 │   ├── workflow.md
 │   ├── decisions.md
+│   ├── monitoring-pipeline.md
 │   ├── tableau-build-log.md
 │   └── security.md
-├── tableau/
-│   └── README.md
+├── src/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── pipeline.py
+│   ├── search.py
+│   ├── fetch.py
+│   ├── classify.py
+│   ├── extract.py
+│   ├── validation.py
+│   ├── dedupe.py
+│   ├── sheets.py
+│   ├── state_detection.py
+│   ├── taxonomy.py
+│   ├── models.py
+│   ├── config.py
+│   └── logging_config.py
+├── tests/
+│   ├── __init__.py
+│   ├── helpers.py
+│   ├── test_dedupe.py
+│   ├── test_manual_ingestion.py
+│   ├── test_search.py
+│   ├── test_sheets.py
+│   └── test_validation.py
 ├── data/
 │   └── README.md
-├── src/
+├── tableau/
 │   └── README.md
-├── screenshots/
-│   ├── README.md
-│   └── tableau-overview-2026-10-21.jpg
-└── .gitignore
+└── screenshots/
+    ├── README.md
+    └── tableau-overview-2026-10-21.jpg
 ```
 
 ## Portfolio framing
