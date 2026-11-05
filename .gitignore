@@ -1,0 +1,30 @@
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+service-account*.json
+credentials*.json
+secrets/
+credentials/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Tableau / local data
+*.hyper
+*.tfl
+*.tflx
+
+# macOS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
