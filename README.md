@@ -165,6 +165,31 @@ workforce-pell-state-tracker/
     └── requirements.txt
 ```
 
+## Roadmap
+
+Planned next steps, roughly in priority order:
+
+1. **Expand automated monitoring from 5 pilot states to all 50.** The monitoring pipeline currently runs as a
+   five-state pilot (North Carolina, Iowa, Pennsylvania, Illinois, California), selected as early movers when the
+   pipeline was built in August 2026. Each state adds one AI web-search call per run, so scaling to 50 states
+   increases API cost roughly tenfold, and every candidate still requires human review in `Review_Queue`.
+   Scaling will be phased:
+   - Build a verified list of each state's lead-agency domains (many are not on `.gov`, e.g., technical college
+     systems and higher-education boards).
+   - Remove the five-state limit in `src/config.py`.
+   - Run a dry run to estimate cost and review volume, then set cadence by stage (e.g., weekly for states with open
+     applications or approvals, monthly for states still planning).
+2. **Broaden source coverage.** Search is currently limited to each state's official domains. U.S. Department of
+   Education announcements, institution pages, and news coverage have been key evidence in manual verification and
+   should be added as labeled secondary sources.
+3. **Verify student access (Stage 5).** No state yet meets the Stage 5 evidence standard. Track institution
+   enrollment pages and disbursement announcements first in states with federally approved programs
+   (e.g., North Carolina, Texas, Iowa).
+4. **Close data gaps.** Add Florida's four federally approved programs to `Approved_Programs`, and replace
+   third-party sources with official ones for the roughly 23 states that rely on implementation trackers.
+5. **Refresh the analysis** after the next round of state decisions in early 2027, and compare results with the
+   2026-11-17 snapshot.
+
 ## Portfolio framing
 
 > Built a state policy intelligence system for Workforce Pell that combines a structured state-level data model, implementation taxonomy, Tableau visualization, provenance-aware event history, and an AI-assisted human-in-the-loop monitoring pipeline.
