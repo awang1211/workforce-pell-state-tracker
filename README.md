@@ -31,12 +31,19 @@ As of **November 17, 2026**, the tracker records **35 federally approved program
 
 Using the tracker's data frozen on 2026-11-17, a state-level analysis asks whether early Workforce Pell progress reflects existing state capacity or student need. Early implementation appears to track capacity more than need. See [`analysis/`](analysis/README.md) for findings, figures, and methods.
 
+## Readiness checker
+
+A public self-check tool lets institutions enter a short-term program's details and see which federal Workforce Pell requirements it appears to meet, which it fails, and which still need confirmation, along with their state's current stage from this tracker. Every rule cites the U.S. Department of Education's Workforce Pell FAQs (October 2026).
+
+**Try it:** [workforce-pell-checker.streamlit.app](https://workforce-pell-checker.streamlit.app/) · Code, rules, and tests: [`checker/`](checker/README.md)
+
 ## Current architecture
 
 **Visualization:** [Tableau Public](https://public.tableau.com/app/profile/anruo.wang5635/viz/WorkforcePellGrantStatewideImplementationTracker/Tracker?publish=yes)  
 **Operational backend:** [Google Sheets](https://docs.google.com/spreadsheets/d/1rhVtZF4VRqX-_yOFa4gCSe73H8bMqkhNPm9U_hHtNrM/edit?usp=sharing)  
 **Monitoring:** Python + OpenAI-assisted source discovery/extraction  
-**Quality control:** Human review before authoritative state-status changes
+**Quality control:** Human review before authoritative state-status changes  
+**Readiness checker:** [Streamlit app](https://workforce-pell-checker.streamlit.app/)
 
 This project combines policy research, a structured Google Sheets backend, Tableau visualization, and an AI-assisted human-in-the-loop monitoring workflow. The goal is not only to show **where each state stands**, but also **what changed, what evidence supports the status, which programs are approved, and how implementation capacity differs across states**.
 
@@ -143,12 +150,19 @@ workforce-pell-state-tracker/
 ├── screenshots/
 │   ├── README.md
 │   └── tableau-overview-2026-10-21.jpg
-└── analysis/
+├── analysis/
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── notebooks/
+│   ├── data/
+│   └── figures/
+└── checker/
     ├── README.md
-    ├── requirements.txt
-    ├── notebooks/
-    ├── data/
-    └── figures/
+    ├── app.py
+    ├── eligibility.py
+    ├── test_eligibility.py
+    ├── TEST_LOG.md
+    └── requirements.txt
 ```
 
 ## Portfolio framing

@@ -1,5 +1,7 @@
 # Workforce Pell Readiness Checker
 
+**Live app:** https://workforce-pell-checker.streamlit.app/
+
 A self-check tool for institutions: enter a short-term program's details and see which federal Workforce Pell
 requirements it appears to meet, which it fails, and which still need confirmation, along with where the
 state's approval process stands.
