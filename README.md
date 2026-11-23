@@ -10,7 +10,7 @@ A state policy intelligence system for tracking Workforce Pell implementation ac
 **Official reference:** [U.S. Department of Education — Workforce Pell Grant Final Rule Fact Sheet](https://www.ed.gov/media/document/workforce-pell-grant-final-rule-fact-sheet-114075.pdf)
 
 
-As of **October 21, 2026**, the tracker records **28 federally approved programs on the public record across 12 institutions in 6 states**. Of those, **21 were announced directly by the U.S. Department of Education** and **7 are documented as federally approved by official state sources**. Three newly state-listed Eastern Iowa Community Colleges records are retained with an additional verification flag because a separate ED announcement has not yet been identified.
+As of **November 17, 2026**, the tracker records **35 federally approved programs on the public record across 17 institutions in 7 states**. Of those, **22 were announced directly by the U.S. Department of Education** and **13 are documented as federally approved by official state rosters or institutions**. Three newly state-listed Eastern Iowa Community Colleges records are retained with an additional verification flag because a separate ED announcement has not yet been identified.
 
 
 <img width="1430" height="856" alt="Screenshot 2026-11-04 at 11 13 33 PM" src="https://github.com/user-attachments/assets/2d02c7b4-3d5f-44dc-a407-be0bb52471f4" />
@@ -26,6 +26,10 @@ As of **October 21, 2026**, the tracker records **28 federally approved programs
 - Which institutions and occupations are represented in approved programs?
 - What material implementation events changed a state's status over time?
 - Where are data infrastructure, governance, and institutional readiness creating bottlenecks?
+
+## Analysis: Capacity or Need?
+
+Using the tracker's data frozen on 2026-11-17, a state-level analysis asks whether early Workforce Pell progress reflects existing state capacity or student need. Early implementation appears to track capacity more than need. See [`analysis/`](analysis/README.md) for findings, figures, and methods.
 
 ## Current architecture
 
@@ -72,7 +76,7 @@ See [`docs/data-model.md`](docs/data-model.md) for details.
 
 | Stage | Label | Meaning |
 |---|---|---|
-| 0 | Not yet reviewed | State has not yet been systematically verified; does **not** mean no activity |
+| 0 | Not yet reviewed | State has not yet been systematically verified (does **not** mean no activity), or was reviewed and no public activity was found |
 | 1 | Planning / systems build | Governance, data, and implementation systems are being prepared |
 | 2 | Framework issued / rulemaking | Formal policy, guidance, or certification framework is public |
 | 3 | Applications open | Institutions/programs can submit for state review |
@@ -96,7 +100,6 @@ Important: Stage 4 intentionally includes both state-approved and federally appr
 workforce-pell-state-tracker/
 ├── README.md
 ├── requirements.txt
-├── .env.example
 ├── .gitignore
 ├── config/
 │   └── states.json
@@ -137,9 +140,15 @@ workforce-pell-state-tracker/
 │   └── README.md
 ├── tableau/
 │   └── README.md
-└── screenshots/
+├── screenshots/
+│   ├── README.md
+│   └── tableau-overview-2026-10-21.jpg
+└── analysis/
     ├── README.md
-    └── tableau-overview-2026-10-21.jpg
+    ├── requirements.txt
+    ├── notebooks/
+    ├── data/
+    └── figures/
 ```
 
 ## Portfolio framing
