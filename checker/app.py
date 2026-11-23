@@ -7,6 +7,7 @@ import streamlit as st
 from eligibility import FAQ_URL, HOUR_RANGES, check_program, summarize
 
 STATE_FILE = Path(__file__).resolve().parent.parent / "analysis" / "data" / "state_status_2026-11-17.csv"
+TRACKER_URL = "https://public.tableau.com/app/profile/anruo.wang5635/viz/WorkforcePellGrantStatewideImplementationTracker/Tracker"
 STATUS_ICON = {"Met": "✅", "Not met": "❌", "Needs check": "⚠️"}
 
 
@@ -79,8 +80,14 @@ if submitted:
                         f"{r['reason']}  \n<small>Source: {r['source']}</small>", unsafe_allow_html=True)
 
     st.subheader(f"Where {state} stands")
+    evidence_date = row.get("Source_Date")
+    evidence_line = f"**Source date:** {evidence_date}  \n" if isinstance(evidence_date, str) and evidence_date[:2] == "20" else ""
     st.write(f"**Tracker stage:** {int(row['Stage_Order'])} — {row['Overall_Stage']}  \n"
-             f"**Last verified:** {row['Last_Verified']}")
+             f"{evidence_line}"
+             f"**Last checked for changes:** {row['Last_Verified']}")
+    st.caption("The source date is when the cited evidence was published or recorded; the last-checked date is when the tracker "
+               "confirmed no newer change. This is a snapshot frozen on 2026-11-17. For the latest status, see the "
+               f"[live tracker]({TRACKER_URL}).")
     if isinstance(row.get("Primary_Source"), str):
         links = [u.strip() for u in str(row.get("Source_URL", "")).split(";") if u.strip().startswith("http")]
         st.write("**Source:** " + row["Primary_Source"] + ("  \n" + "  \n".join(links) if links else ""))
