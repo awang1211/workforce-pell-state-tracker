@@ -3,7 +3,7 @@
     {"name": "North Carolina", "official_domains": ["nc.gov", "nccommunitycolleges.edu"]},
     {"name": "Iowa", "official_domains": ["iowa.gov", "educate.iowa.gov", "workforce.iowa.gov"]},
     {"name": "Pennsylvania", "official_domains": ["pa.gov", "education.pa.gov"]},
-    {"name": "Illinois", "official_domains": ["illinois.gov", "ibhe.org", "icc.edu"]},
+    {"name": "Illinois", "official_domains": ["illinois.gov", "ibhe.org", "iccb.org"]},
     {"name": "California", "official_domains": ["ca.gov", "cccco.edu", "labormarketinfo.edd.ca.gov"]}
   ]
 }
